@@ -1,0 +1,5 @@
+package ru.mirea.arkabaev.lab1;
+
+public interface Printable {
+    void println();
+}
