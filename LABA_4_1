@@ -1,0 +1,33 @@
+package ru.mirea.arkabaev.laba5;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+
+public class MyPanel extends JPanel{
+    private JLabel imputlabel1;
+    private JTextField input1;
+    private JLabel output;
+    public MyPanel() {
+        imputlabel1 = new JLabel ("A:");
+        output = new JLabel ("Result:");
+        input1 = new JTextField(5);
+        class InListener implements ActionListener {
+            public void actionPerformed(ActionEvent e) {
+                String text = input1.getText();
+                int tmp = Integer.parseInt(text);
+                int sqw = tmp*tmp;
+                output.setText("Result:" + Integer.toString(sqw));
+            }
+
+        }
+        input1.addActionListener(new InListener());
+        add(imputlabel1);
+        add(input1);
+        add(output);
+        setPreferredSize(new Dimension (400, 100));
+        setBackground(Color.cyan);
+
+    }
+}
