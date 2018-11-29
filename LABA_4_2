@@ -1,0 +1,14 @@
+package ru.mirea.arkabaev.laba5;
+import javax.swing.JFrame;
+
+public class Tester {
+    public static void main(String[] args) {
+        JFrame fr = new JFrame("OXOXO");
+        fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        MyPanel panel = new MyPanel();
+        fr.getContentPane().add(panel);
+        fr.pack();
+        fr.setVisible(true);
+
+    }
+}
